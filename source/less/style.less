@@ -1,0 +1,57 @@
+/* ПОДКЛЮЧЕНИЕ ШРИФТОВ */
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: local('Open Sans'),
+    url(/fonts/opensansbold.woff2) format('woff2'),
+    url(/fonts/opensansbold.woff) format('woff');
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Open Sans'),
+    url(/fonts/opensans.woff2) format('woff2'),
+    url(/fonts/opensans.woff) format('woff');
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: local('Open Sans'),
+    url(/fonts/opensanslight.woff2) format('woff2'),
+    url(/fonts/opensanslight.woff) format('woff');
+}
+
+/* ПЕРЕМЕННЫЕ */
+@color-white: #ffffff;
+@color-white-rgb: 255, 255, 255;
+@color-black: #000000;
+@color-black-rgb: 0,0,0;
+@color-blue-dark: #283645;
+@color-blur-sapphire: #1D2631;
+@color-red: #d22856;
+
+/* ЭКРАНЫ */
+@mobile-width: 320px;
+@tablet-width: 660px;
+@desktop-width: 1200px;
+
+/* ПОДКЮЧАЕМЫЕ БЛОКИ */
+@import 'default.less';
+@import 'block/header.less';
+@import 'block/main-menu.less';
+@import 'block/button.less';
+
+.disabled {
+  pointer-events: none;
+  opacity: .3;
+  fill: @color-white;
+  color: @color-white;
+}

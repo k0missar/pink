@@ -1,3 +1,8 @@
+/*
+1. ТАБЛИЦА-ПРАЙС price__LIST
+2. УПРАВЛЕНИЕ СЛАЙДЕРОМ price__CONTROLS
+*/
+
 .price {
   position: relative;
   z-index: 2;
@@ -19,10 +24,10 @@
       position: absolute;
       z-index: -1;
       width: 320px;
-      height: 29px;
+      height: 32px;
       left: calc(50% - 160px);
-      top: -29px;
-      background-image: linear-gradient(-5deg, @color-gray-light 50%, transparent 50%);
+      top: -28px;
+      background-image: linear-gradient(-4deg, @color-gray-light 50%, transparent 50%);
 
       @media (min-width: @tablet-width) {
         width: 660px;
@@ -42,8 +47,8 @@
   &--size {
     width: @mobile-width;
     min-height: 460px;
-    padding-top: 83px;
-    padding-bottom: 100px;
+    padding-top: 81px;
+    padding-bottom: 46px;
     position: relative;
     overflow: hidden;
 
@@ -56,6 +61,10 @@
       width: @desktop-width;
     }
   }
+}
+
+/* ТАБЛИЦА-ПРАЙС price__LIST */
+.price {
 
   &__list {
     position: absolute;
@@ -78,9 +87,10 @@
 
   &__item-header {
     min-width: 276px;
-    height: 94px;
+    padding-top: 12px;
+    height: 100px;
     background-color: @color-gray;
-    border: 2px solid @color-silver;
+    border: 1px solid @color-silver;
 
     @media (min-width: @tablet-width) {
       min-width: 152px;
@@ -100,10 +110,10 @@
       &::before {
         content: "Хит";
         width: 105px;
-        height: 20px;
+        height: 24px;
         position: absolute;
-        left: -25px;
-        top: 15px;
+        left: -29px;
+        top: 19px;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -168,13 +178,14 @@
 
   &__point {
     min-width: 276px;
-    height: 59px;
-    padding: 0 20px;
+    height: 60px;
+    padding-left: 20px;
+    padding-right: 16px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     background-color: @color-white;
-    border: 2px solid @color-silver;
+    border: 1px solid @color-silver;
 
     @media (min-width: @tablet-width) {
       min-width: 152px;
@@ -221,10 +232,10 @@
   }
 }
 
-/* Кнопки слайдера */
+/* УПРАВЛЕНИЕ СЛАЙДЕРОМ price__CONTROLS */
 .price {
   &__controls {
-    padding: 322px 112px 0;
+    padding: 322px 132px 0;
     display: flex;
     justify-content: space-between;
     align-items: center;

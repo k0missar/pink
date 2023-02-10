@@ -1,10 +1,15 @@
+/*
+1. КАРТОЧКА ОТЗЫВОВ reviews__ITEM
+2. ПАНЕЛЬ УПРАВЛЕНИЯ СЛАЙДЕРОМ reviews__CONTROLS
+*/
+
 .reviews {
   position: relative;
   background-color: @color-white;
 
   &--size {
     width: @mobile-width;
-    padding: 50px 20px 60px;
+    padding: 38px 20px 56px;
 
     @media (min-width: @tablet-width) {
       width: @tablet-width;
@@ -21,9 +26,12 @@
       background-size: 79px 63px;
     }
   }
+}
 
+/* КАРТОЧКА ОТЗЫВОВ reviews__ITEM */
+.reviews {
   &__item {
-    margin-bottom: 44px;
+    margin-bottom: 30px;
 
     @media (min-width: @tablet-width) {
       display: flex;
@@ -37,7 +45,7 @@
   }
 
   &__item-header {
-    margin-bottom: 31px;
+    margin-bottom: 12px;
 
     @media (min-width: @tablet-width) {
       margin-bottom: 0;
@@ -93,9 +101,13 @@
       font-size: 18px;
     }
   }
+}
+
+/* ПАНЕЛЬ УПРАВЛЕНИЯ СЛАЙДЕРОМ reviews__CONTROLS */
+.reviews {
 
   &__controls {
-    padding: 0 112px;
+    padding: 0 110px;
 
     @media (min-width: @tablet-width) {
       padding: 0 282px;

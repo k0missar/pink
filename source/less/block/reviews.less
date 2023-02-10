@@ -1,0 +1,128 @@
+.reviews {
+  position: relative;
+  background-color: @color-white;
+
+  &--size {
+    width: @mobile-width;
+    padding: 50px 20px 60px;
+
+    @media (min-width: @tablet-width) {
+      width: @tablet-width;
+      padding-top: 0;
+    }
+
+    @media (min-width: @desktop-width) {
+      width: @desktop-width;
+      padding-top: 193px;
+      position: relative;
+      background-image: url("../img/quotes.svg");
+      background-repeat: no-repeat;
+      background-position: center top 72px;
+      background-size: 79px 63px;
+    }
+  }
+
+  &__item {
+    margin-bottom: 44px;
+
+    @media (min-width: @tablet-width) {
+      display: flex;
+      flex-direction: column-reverse;
+    }
+
+    @media (min-width: @desktop-width) {
+      width: 688px;
+      margin: 0 auto;
+    }
+  }
+
+  &__item-header {
+    margin-bottom: 31px;
+
+    @media (min-width: @tablet-width) {
+      margin-bottom: 0;
+    }
+  }
+
+  &__item-name {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 34px;
+    text-align: center;
+
+    @media (min-width: @tablet-width) {
+      margin-bottom: 17px;
+      font-size: 20px;
+      line-height: 30px;
+    }
+
+    @media (min-width: @desktop-width) {
+      font-size: 24px;
+    }
+  }
+
+  &__item-info {
+    display: none;
+
+    @media (min-width: @tablet-width) {
+      display: block;
+      font-family: 'Open Sans', sans-serif;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 30px;
+      text-align: center;
+      color: @color-gray;
+    }
+
+    @media (min-width: @desktop-width) {
+      font-size: 18px;
+    }
+  }
+
+  &__item-text {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 30px;
+    text-align: center;
+    color: @color-gray;
+
+    @media (min-width: @tablet-width) {
+      margin-bottom: 51px;
+      font-size: 18px;
+    }
+  }
+
+  &__controls {
+    padding: 0 112px;
+
+    @media (min-width: @tablet-width) {
+      padding: 0 282px;
+    }
+
+    @media (min-width: @desktop-width) {
+      display: none;
+    }
+  }
+
+  &__controls-desktop {
+    display: none;
+
+    @media (min-width: @desktop-width) {
+      display: block;
+    }
+  }
+
+  &__controls-desktop-left {
+    position: absolute;
+    top: 50%;
+    left: 130px;
+  }
+
+  &__controls-desktop-right {
+    position: absolute;
+    top: 50%;
+    right: 130px;
+  }
+}

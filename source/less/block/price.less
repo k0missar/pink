@@ -1,0 +1,236 @@
+.price {
+  position: relative;
+  z-index: 2;
+  background-color: @color-gray-light;
+
+  /*&::before {
+      content: "";
+      position: absolute;
+      width: 1320px;
+      height: 124px;
+      left: calc(50% - 160px - 1320px);
+      top: -4px;
+      background-image: linear-gradient(-5deg, @color-white 50%, transparent 50%);
+      transform: rotate(180deg);
+    }*/
+
+    &::after {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      width: 320px;
+      height: 29px;
+      left: calc(50% - 160px);
+      top: -29px;
+      background-image: linear-gradient(-5deg, @color-gray-light 50%, transparent 50%);
+
+      @media (min-width: @tablet-width) {
+        width: 660px;
+        height: 60px;
+        left: calc(50% - 330px);
+        top: -60px;
+      }
+
+      @media (min-width: @desktop-width) {
+        width: 1200px;
+        height: 108px;
+        left: calc(50% - 600px);
+        top: -108px;
+      }
+    }
+
+  &--size {
+    width: @mobile-width;
+    min-height: 460px;
+    padding-top: 83px;
+    padding-bottom: 100px;
+    position: relative;
+    overflow: hidden;
+
+    @media (min-width: @tablet-width) {
+      width: @tablet-width;
+      overflow: visible;
+    }
+
+    @media (min-width: @desktop-width) {
+      width: @desktop-width;
+    }
+  }
+
+  &__list {
+    position: absolute;
+    left: -530px;
+    border-collapse: collapse;
+
+    @media (min-width: @tablet-width) {
+      margin: 0 auto;
+      position: static;
+    }
+  }
+
+  &__list-row {
+    display: flex;
+
+    &--title {
+      justify-content: end;
+    }
+  }
+
+  &__item-header {
+    min-width: 276px;
+    height: 94px;
+    background-color: @color-gray;
+    border: 2px solid @color-silver;
+
+    @media (min-width: @tablet-width) {
+      min-width: 152px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    @media (min-width: @desktop-width) {
+      width: 234px;
+    }
+
+    &--hit {
+      position: relative;
+      overflow: hidden;
+
+      &::before {
+        content: "Хит";
+        width: 105px;
+        height: 20px;
+        position: absolute;
+        left: -25px;
+        top: 15px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: 'Open Sans', sans-serif;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 30px;
+        text-transform: uppercase;
+        color: @color-white;
+        background-color: @color-red;
+        transform: rotate(-45deg);
+
+        @media (min-width: @tablet-width) {
+          width: 86px;
+        }
+
+        @media (min-width: @desktop-width) {
+          width: 105px;
+        }
+      }
+    }
+  }
+
+  &__item-header:nth-child(2) {
+    @media (min-width: @tablet-width) {
+      border-radius: 7px 0 0 0;
+    }
+  }
+
+  &__item-header:last-child {
+    @media (min-width: @tablet-width) {
+      border-radius: 0 7px  0 0;
+    }
+  }
+
+  &__item-title {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 30px;
+    text-align: center;
+    text-transform: uppercase;
+    color: @color-white;
+
+    @media (min-width: @desktop-width) {
+      font-size: 18px
+    }
+  }
+
+  &__item-cost {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 30px;
+    text-transform: uppercase;
+    color: @color-white;
+
+    @media (min-width: @desktop-width) {
+      font-size: 24px;
+    }
+  }
+
+  &__point {
+    min-width: 276px;
+    height: 59px;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: @color-white;
+    border: 2px solid @color-silver;
+
+    @media (min-width: @tablet-width) {
+      min-width: 152px;
+      padding: 0 15px;
+      justify-content: center;
+    }
+
+    @media (min-width: @desktop-width) {
+      min-width: 234px;
+      padding: 0 22px;
+    }
+  }
+
+  &__item-text {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 30px;
+    text-transform: uppercase;
+    color: @color-gray;
+
+    @media (min-width: @tablet-width) {
+      display: none;
+      text-transform: none;
+    }
+
+    @media (min-width: @desktop-width) {
+      font-size: 18px;
+    }
+
+    &--show {
+      max-width: 152px;
+      margin-right: auto;
+      display: block;
+    }
+  }
+
+  &__point-picture {
+    width: 31px;
+    height: 27px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+/* Кнопки слайдера */
+.price {
+  &__controls {
+    padding: 322px 112px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @media (min-width: @tablet-width) {
+      display: none;
+    }
+  }
+}

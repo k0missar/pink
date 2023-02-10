@@ -1,0 +1,39 @@
+.controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &__item {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: @color-gray;
+    opacity: .3;
+
+    &--current {
+      width: 12px;
+      height: 12px;
+      background-color: @color-white;
+      border: 3px solid @color-gray;
+      opacity: 1;
+    }
+  }
+
+  &__desktop-left {
+    width: 22px;
+    height: 22px;
+    border-left: 1px solid @color-gray;
+    border-bottom: 1px solid @color-gray;
+    transform: rotate(45deg);
+    opacity: .3;
+  }
+
+  &__desktop-right {
+    width: 22px;
+    height: 22px;
+    border-left: 1px solid @color-gray;
+    border-bottom: 1px solid @color-gray;
+    transform: rotate(225deg);
+    opacity: .3;
+  }
+}

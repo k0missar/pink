@@ -8,17 +8,6 @@
   z-index: 2;
   background-color: @color-gray-light;
 
-  /*&::before {
-      content: "";
-      position: absolute;
-      width: 1320px;
-      height: 124px;
-      left: calc(50% - 160px - 1320px);
-      top: -4px;
-      background-image: linear-gradient(-5deg, @color-white 50%, transparent 50%);
-      transform: rotate(180deg);
-    }*/
-
     &::after {
       content: "";
       position: absolute;
@@ -33,7 +22,7 @@
         width: 660px;
         height: 60px;
         left: calc(50% - 330px);
-        top: -60px;
+        top: -53px;
       }
 
       @media (min-width: @desktop-width) {
@@ -54,6 +43,9 @@
 
     @media (min-width: @tablet-width) {
       width: @tablet-width;
+      min-height: 0;
+      padding-top: 55px;
+      padding-bottom: 69px;
       overflow: visible;
     }
 
@@ -85,6 +77,10 @@
     }
   }
 
+  &__item-header:not(:last-child) {
+      border-right: 2px solid @color-silver;
+    }
+
   &__item-header {
     min-width: 276px;
     padding-top: 12px;
@@ -93,10 +89,13 @@
     border: 1px solid @color-silver;
 
     @media (min-width: @tablet-width) {
-      min-width: 152px;
+      min-width: 155px;
+      height: 79px;
+      padding: 0;
       display: flex;
       flex-direction: column;
       justify-content: center;
+      border: 2px solid #283645;
     }
 
     @media (min-width: @desktop-width) {
@@ -127,7 +126,10 @@
         transform: rotate(-45deg);
 
         @media (min-width: @tablet-width) {
-          width: 86px;
+          width: 105px;
+          height: 19px;
+          left: -33px;
+          top: 15px;
         }
 
         @media (min-width: @desktop-width) {
@@ -139,13 +141,13 @@
 
   &__item-header:nth-child(2) {
     @media (min-width: @tablet-width) {
-      border-radius: 7px 0 0 0;
+      border-radius: 1px 0 0 0;
     }
   }
 
   &__item-header:last-child {
     @media (min-width: @tablet-width) {
-      border-radius: 0 7px  0 0;
+      border-radius: 0 1px  0 0;
     }
   }
 
@@ -176,6 +178,10 @@
     }
   }
 
+  &__point:not(:last-child) {
+    border-right: none;
+  }
+
   &__point {
     min-width: 276px;
     height: 60px;
@@ -188,9 +194,12 @@
     border: 1px solid @color-silver;
 
     @media (min-width: @tablet-width) {
-      min-width: 152px;
-      padding: 0 15px;
+      min-width: 155px;
+      height: 47px;
+      padding: 18px 15px 17px;
       justify-content: center;
+      border: 2px solid #E5E5E5;
+      border-spacing: 0;
     }
 
     @media (min-width: @desktop-width) {

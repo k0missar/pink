@@ -2,7 +2,7 @@
   background-color: @color-blue-dark;
 
   &--size {
-  width: 320px;
+    width: 320px;
 
     @media (min-width: @tablet-width) {
       width: @tablet-width;
@@ -15,7 +15,7 @@
 
   &__bar {
     position: relative;
-    background-color: rgba(@color-black-rgb, .3);
+    background-color: rgba(@color-black-rgb, 0.3);
 
     @media (min-width: @desktop-width) {
       min-height: 110px;
@@ -65,7 +65,7 @@
 
     &:active {
       fill: @color-white;
-      fill-opacity: .3;
+      fill-opacity: 0.3;
     }
   }
 
@@ -78,8 +78,9 @@
   &__logo-tablet {
     display: none;
 
-    @media(min-width: @tablet-width) and (max-width: @desktop-width) {
+    @media (min-width: @tablet-width) and (max-width: @desktop-width) {
       display: block;
+      margin-bottom: 15px;
     }
   }
 
@@ -123,7 +124,7 @@
     &--disabled {
       pointer-events: none;
       fill: @color-red;
-      opacity: .3;
+      opacity: 0.3;
     }
   }
 
@@ -131,37 +132,42 @@
     padding-top: 66px;
     padding-bottom: 29px;
     background-color: @color-blue-dark;
-    background-image:  url(../img/screen.png), url(../img/phone.png), url(../img/back-mobile.jpg);
+    background-image: url(../img/screen.png), url(../img/phone.png),
+      url(../img/back-mobile.jpg);
     background-repeat: no-repeat;
     background-position: top 208px center, top 175px left, top center;
     background-size: 111px auto, 320px auto, 320px auto;
 
     @media (min-resolution: 2dppx) {
-      background-image: url(../img/screen@2x.png), url(../img/phone@2x.png), url(../img/back-mobile@2x.jpg);
+      background-image: url(../img/screen@2x.png), url(../img/phone@2x.png),
+        url(../img/back-mobile@2x.jpg);
     }
 
     @media (min-width: @tablet-width) {
       padding-top: 109px;
-      background-image:  url(../img/screen-tablet.png), url(../img/phone-tablet.png), url(../img/back-tablet.jpg);
-      background-position: bottom 145px left 371px, bottom left, top left;
-      background-size: 195px auto, 660px auto, cover;
+      padding-bottom: 114px;
+      background-image: url(../img/Group10.png), url(../img/back-tablet.jpg);
+      background-position: bottom left, top left;
+      background-size: 660px auto, cover;
     }
 
     @media (min-width: @tablet-width) and (min-resolution: 2dppx) {
-      background-image:  url(../img/screen-tablet@2x.png), url(../img/phone-tablet@2x.png), url(../img/back-tablet@2x.jpg);
+      background-image: url(../img/Group10@2x.png), url(../img/back-tablet@2x.jpg);
     }
 
     @media (min-width: @desktop-width) {
       padding-left: 130px;
       padding-right: 130px;
       padding-bottom: 130px;
-      background-image:  url(../img/screen-desktop.png), url(../img/phone-desktop.png), url(../img/back-desktop.jpg);
+      background-image: url(../img/screen-desktop.png),
+        url(../img/phone-desktop.png), url(../img/back-desktop.jpg);
       background-position: bottom 173px right 250px, bottom right, top left;
       background-size: 230px auto, 1050px auto, cover;
     }
 
     @media (min-width: @desktop-width) and (min-resolution: 2dppx) {
-      background-image:  url(../img/screen-desktop@2x.png), url(../img/phone-desktop@2x.png), url(../img/back-desktop@2x.jpg);
+      background-image: url(../img/screen-desktop@2x.png),
+        url(../img/phone-desktop@2x.png), url(../img/back-desktop@2x.jpg);
     }
   }
 
@@ -173,9 +179,9 @@
 
     @media (min-width: @tablet-width) {
       width: 300px;
-      margin-top: 72px;
+      margin-top: 95px;
       margin-left: 20px;
-      margin-bottom: 39px;
+      margin-bottom: 30px;
       padding: 0 30px;
       font-size: 40px;
     }
@@ -189,21 +195,22 @@
     }
   }
 
-&__button-app {
-  width: 280px;
-  height: 55px;
-  margin: 0 20px 35px;
+  &__button-app {
+    width: 280px;
+    height: 55px;
+    margin: 0 20px 35px;
 
-  @media (min-width: @tablet-width) {
-    width: 300px;
-    margin-bottom: 51px;
-  }
+    @media (min-width: @tablet-width) {
+      width: 300px;
+      margin-bottom: 47px;
+      background-color: transparent;
+    }
 
-  @media (min-width: @desktop-width) {
-    margin-left: 0;
-    margin-bottom: 67px;
+    @media (min-width: @desktop-width) {
+      margin-left: 0;
+      margin-bottom: 67px;
+    }
   }
-}
 
   &__app-store {
     margin-bottom: 20px;
@@ -215,8 +222,8 @@
     @media (min-width: @tablet-width) {
       width: 300px;
       margin-left: 20px;
-      margin-bottom: 42px;
-      padding: 0 42px;
+      margin-bottom: 31px;
+      padding: 0 48px;
     }
 
     @media (min-width: @desktop-width) {

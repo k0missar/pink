@@ -43,7 +43,7 @@
   &__header {
     width: 320px;
     margin: 0 auto 60px;
-    padding: 42px 0 0;
+    padding: 43px 0 0;
     font-weight: 300;
     font-size: 24px;
     line-height: 120%;
@@ -52,6 +52,7 @@
 
     @media (min-width: @tablet-width) {
       width: 660px;
+      padding-top: 47px;
       font-size: 40px;
       line-height: 54px;
     }
@@ -78,24 +79,31 @@
 
   &__content {
     margin: 0 auto;
-    padding-top: 52px;
+    padding-top: 50px;
     position: relative;
     background-color: @color-gray-light;
+
+    @media (min-width: @tablet-width) {
+      padding-top: 40px;
+      padding-bottom: 17px;
+    }
 
     @media (min-width: @desktop-width) {
       padding-top: 250px;
     }
 
-    /*&::before {
-      content: "";
-      position: absolute;
-      width: 1320px;
-      height: 124px;
-      left: calc(50% - 160px - 1320px);
-      top: -4px;
-      background-image: linear-gradient(-5deg, @color-white 50%, transparent 50%);
-      transform: rotate(180deg);
-    }*/
+    &::before {
+      @media (min-width: @tablet-width) {
+        content: "";
+        position: absolute;
+        z-index: 0;
+        width: 330px;
+        height: 30px;
+        left: calc(50% - 330px);
+        top: -3px;
+        background-image: linear-gradient(-185deg, @color-white 50%, transparent 50%);
+      }
+    }
 
     &::after {
       content: "";
@@ -111,7 +119,7 @@
         width: 660px;
         height: 60px;
         left: calc(50% - 330px);
-        top: -60px;
+        top: -33px;
       }
 
       @media (min-width: @desktop-width) {
@@ -128,7 +136,12 @@
 .promo {
 
   &__materials {
+    margin-bottom: 26px;
+
     @media (min-width: @tablet-width) {
+      margin-bottom: 26px;
+      padding-top: 5px;
+      padding-left: 2px;
       grid-area: promo;
     }
 
@@ -143,7 +156,7 @@
   }
 
   &__materials-title {
-    margin-bottom: 11px;
+    margin-bottom: 12px;
     font-weight: 700;
     font-size: 18px;
     line-height: 24px;
@@ -152,6 +165,7 @@
 
     @media (min-width: @tablet-width) {
       text-align: left;
+      margin-bottom: 12px;
     }
 
     @media (min-width: @desktop-width) {
@@ -163,7 +177,9 @@
   }
 
   &__materials-text {
-    margin-bottom: 31px;
+    margin-bottom: 32px;
+    padding-left: 20px;
+    padding-right: 20px;
     font-weight: 400;
     font-size: 14px;
     line-height: 24px;
@@ -171,6 +187,8 @@
 
     @media (min-width: @tablet-width) {
       text-align: left;
+      margin-bottom: 34px;
+      padding-right: 15px;
     }
 
     @media (min-width: @desktop-width) {
@@ -178,10 +196,15 @@
       line-height: 30px;
       text-align: center;
     }
+  }
 
-    &__materials-text:last-child {
+  &__materials-text:last-child {
+    margin-bottom: 0;
+
+    @media (min-width: @tablet-width) {
       margin-bottom: 0;
     }
+
 
     &>p {
       padding: 0 20px;
@@ -198,7 +221,7 @@
 
   &__pictures {
     height: 290px;
-    
+
     @media (min-width: @tablet-width) {
       grid-area: mobile;
       position: relative;
@@ -270,6 +293,7 @@
 .promo {
   &__timer {
     display: none;
+    margin-bottom: 100px;
 
     @media (min-width: @tablet-width) {
       display: block;
@@ -285,10 +309,10 @@
   &__timer--size {
     @media (min-width: @tablet-width) {
       width: @tablet-width;
-      padding: 54px 20px 109px;
+      padding: 54px 20px 0;
       display: flex;
       justify-content: space-between;
-      align-items: center;
+      align-items: start;
     }
 
     @media (min-width: @desktop-width) {
@@ -316,7 +340,8 @@
   }
 
   &__timer-title {
-    margin-bottom: 24px;
+    margin-top: 42px;
+    margin-bottom: 10px;
     font-family: 'Open Sans', sans-serif;
     font-weight: 700;
     font-size: 30px;
@@ -327,8 +352,15 @@
     }
   }
 
+  &__timer-title span {
+    @media (min-width: @tablet-width) {
+      display: block;
+    }
+  }
+
   &__timer-text {
-    margin-bottom: 24px;
+    width: 300px;
+    margin-bottom: 11px;
     font-family: 'Open Sans', sans-serif;
     font-weight: 400;
     font-size: 14px;

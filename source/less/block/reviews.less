@@ -7,6 +7,14 @@
   position: relative;
   background-color: @color-white;
 
+  @media (min-width: @desktop-width) {
+    margin-bottom: 80px;
+    background-image: url("../img/quotes.svg");
+    background-repeat: no-repeat;
+    background-position: center top 72px;
+    background-size: 79px 63px;
+  }
+
   &--size {
     width: @mobile-width;
     padding: 39px 20px 56px;
@@ -18,12 +26,8 @@
 
     @media (min-width: @desktop-width) {
       width: @desktop-width;
-      padding-top: 193px;
       position: relative;
-      background-image: url("../img/quotes.svg");
-      background-repeat: no-repeat;
-      background-position: center top 72px;
-      background-size: 79px 63px;
+      padding-top: 184px;
     }
   }
 }

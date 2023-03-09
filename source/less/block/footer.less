@@ -20,7 +20,7 @@
 
     @media (min-width: @desktop-width) {
       width: @desktop-width;
-      padding: 0 130px;
+      padding: 34px 130px;
     }
   }
 
@@ -31,14 +31,30 @@
       margin-bottom: 0;
       margin-right: 76px;
     }
+
+    @media (min-width: @desktop-width) {
+      margin-right: 239px;
+    }
   }
 
-  &__logo-src {
+  &__logo-mini {
     fill: @color-red;
+
+    @media (min-width: @desktop-width) {
+        display: none;
+      }
   }
 
-  &__logo-src path:last-child {
+  &__logo-mini path:last-child {
     fill: @color-gray;
+  }
+
+  &__logo-desktop {
+    display: none;
+    fill: @color-red;
+    @media (min-width: @desktop-width) {
+        display: block;
+      }
   }
 
   &__social {
@@ -50,6 +66,10 @@
     @media (min-width: @tablet-width) {
       margin-bottom: 0;
       margin-right: auto;
+    }
+
+    @media (min-width: @desktop-width) {
+      width: 174px;
     }
   }
 

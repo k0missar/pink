@@ -78,9 +78,13 @@
   &__logo-tablet {
     display: none;
 
-    @media (min-width: @tablet-width) and (max-width: @desktop-width) {
+    @media (min-width: @tablet-width) {
       display: block;
       margin-bottom: 15px;
+    }
+
+    @media (min-width: @desktop-width) {
+      display: none;
     }
   }
 
@@ -153,7 +157,8 @@
     }
 
     @media (min-width: @tablet-width) and (min-resolution: 2dppx) {
-      background-image: url(../img/Group10@2x.png), url(../img/back-tablet@2x.jpg);
+      background-image: url(../img/Group10@2x.png),
+        url(../img/back-tablet@2x.jpg);
     }
 
     @media (min-width: @desktop-width) {
